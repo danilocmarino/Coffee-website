@@ -1,0 +1,304 @@
+
+/* Dark Coffee - Main Styles */
+
+:root {
+    --background: #121212;
+    --surface: #1e1e1e;
+    --gold: #d4af37;
+    --text: #ffffff;
+    --muted: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #000000;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background: linear-gradient(
+        135deg,
+        #111111,
+        #352416
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--gold);
+    color: #111111;
+    padding: 14px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #f1ce61;
+}
+
+/* General Sections */
+
+.about,
+.menu,
+.contact {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+h2 {
+    color: var(--gold);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+/* Coffee Menu */
+
+.menu {
+    background-color: #181818;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.filter-btn {
+    padding: 12px 22px;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--gold);
+    color: #111111;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.coffee-card {
+    background-color: var(--surface);
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    text-align: left;
+}
+
+.coffee-card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.coffee-card p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.coffee-card span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Contact and Footer */
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #000000;
+    padding: 25px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 60px 6%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about,
+    .menu,
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* Coffee card products */
+
+.coffee-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.coffee-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.coffee-card h3 {
+    margin-bottom: 10px;
+}
+
+.coffee-card p {
+    margin-bottom: 15px;
+}
+
+.coffee-card span {
+    margin-top: auto;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+    .coffee-image {
+        height: 200px;
+    }
+}
+
+
+.coffee-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #151515;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.coffee-card {
+    display: flex;
+}
+
+
+/* Hide coffee cards when filtering */
+
+.coffee-card[hidden] {
+    display: none;
+}
+

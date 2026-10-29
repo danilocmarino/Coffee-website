@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Coffee | Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Website header and navigation -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo">DARK COFFEE</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">WELCOME TO DARK COFFEE</p>
+                <h1>Experience Coffee Like Never Before</h1>
+                <p>
+                    Discover rich flavours, freshly roasted beans,
+                    and the perfect cup of coffee.
+                </p>
+                <a href="#menu" class="btn">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="about">
+            <h2>Our Story</h2>
+            <p>
+                At Dark Coffee, we believe every cup tells a story.
+                Our passion is to serve quality coffee in a warm,
+                welcoming atmosphere.
+            </p>
+        </section>
+
+        <!-- Menu section -->
+        <section id="menu" class="menu">
+            <h2>Our Coffee Menu</h2>
+            <p>Discover your new favourite drink.</p>
+
+            <div class="filter-buttons">
+                <button type="button" class="filter-btn active"
+                    data-filter="all">All</button>
+                <button type="button" class="filter-btn"
+                    data-filter="hot">Hot Coffee</button>
+                <button type="button" class="filter-btn"
+                    data-filter="iced">Iced Coffee</button>
+            </div>
+
+            <div class="menu-grid">
+                <article class="coffee-card" data-category="hot">
+                    <img
+                    src="images/espresso.jpg"
+                    alt="A freshly brewed espresso in a coffee cup"
+                    class="coffee-image"
+                >
+                    <h3>Espresso</h3>
+                    <p>Strong and rich Italian coffee.</p>
+                    <span>£2.50</span>
+                </article>
+
+                <article class="coffee-card" data-category="hot">
+                    <img
+                    src="images/capuccino.jpg"
+                    alt="A freshly brewed cappuccino in a coffee cup"
+                    class="coffee-image"
+                >
+                    <h3>Cappuccino</h3>
+                    <p>Espresso with creamy steamed milk.</p>
+                    <span>£3.50</span>
+                </article>
+
+                <article class="coffee-card" data-category="iced">
+                     <img
+                    src="images/iced-latte.jpg"
+                    alt="A freshly brewed iced latte in a coffee cup"
+                    class="coffee-image"
+                >   
+                    <h3>Iced Latte</h3>
+                    <p>Chilled espresso with smooth milk.</p>
+                    <span>£4.00</span>
+                </article>
+
+                <article class="coffee-card" data-category="iced">
+                     <img
+                    src="images/iced-mocha.jpg"
+                    alt="A freshly brewed iced mocha in a coffee cup"
+                    class="coffee-image"
+                >
+                    <h3>Iced Mocha</h3>
+                    <p>Cold coffee with chocolate flavour.</p>
+                    <span>£4.50</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="contact">
+            <h2>Visit Us</h2>
+            <p>123 Coffee Street, London</p>
+            <p>Monday - Sunday: 8:00 AM - 6:00 PM</p>
+            <p>Email: hello@darkcoffee.example</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dark Coffee. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
